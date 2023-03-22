@@ -35,20 +35,20 @@ from pyrogram.types import Message
 @Client.on_message(command(["speedtest", f"speedtest@{bname}"]) & ~filters.edited)
 @sudo_users_only
 async def run_speedtest(_, message: Message):
-    m = await message.reply_text("⚡️ running server speedtest")
+    m = await message.reply_text("⚡️")
     try:
         test = speedtest.Speedtest()
         test.get_best_server()
-        m = await m.edit("⚡️ running download speedtest..")
+        m = await m.edit("👻")
         test.download()
-        m = await m.edit("⚡️ running upload speedtest...")
+        m = await m.edit("😎")
         test.upload()
         test.results.share()
         result = test.results.dict()
     except Exception as e:
         await m.edit(e)
         return
-    m = await m.edit("🔄 sharing speedtest results")
+    m = await m.edit("💥")
     path = wget.download(result["share"])
     try:
         img = Image.open(path)
@@ -60,14 +60,14 @@ async def run_speedtest(_, message: Message):
     output = f"""💡 **SpeedTest Results**
     
 <u>**Client:**</u>
-**ISP:** {result['client']['isp']}
-**Country:** {result['client']['country']}
+**ɪsᴘ:** {result['client']['isp']}
+**ᴄᴏᴜɴᴛʀʏ:** {result['client']['country']}
   
 <u>**Server:**</u>
-**Name:** {result['server']['name']}
-**Country:** {result['server']['country']}, {result['server']['cc']}
-**Sponsor:** {result['server']['sponsor']}
-**Latency:** {result['server']['latency']}
+**ɴᴀᴍᴇ:** {result['server']['name']}
+**ᴄᴏᴜɴᴛʀʏ:** {result['server']['country']}, {result['server']['cc']}
+**sᴘᴏɴsᴏʀ:** {result['server']['sponsor']}
+**ʟᴀᴛᴇɴᴄʏ:** {result['server']['latency']}
 
 ⚡️ **Ping:** {result['ping']}"""
     msg = await app.send_photo(
