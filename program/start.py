@@ -91,12 +91,12 @@ async def start_(c: Client, message: Message):
 
 ☞ I Cᴀɴ Pʟᴀʏ Mᴜsɪᴄ Iɴ Yᴏᴜʀ Gʀᴏᴜᴘ.
 
-» Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ :- [🍻ᯓ𝐌 𝚫 𝐇 𝐈ˢ ͪᵘ ᷜˡ ⷶ™🇮🇳](t.me/official_pro_xD).
+» Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ :- [ᴏᴡɴᴇʀ👻](t.me/its_cute_babu).
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [                                    
-                    InlineKeyboardButton("➕ Aᴅᴅ Mᴇ Tᴏ Uʀ Gʀᴏᴜᴘ ➕", url=f"https://t.me/{me_bot.username}?startgroup=true")
+                    InlineKeyboardButton("🥺 Aᴅᴅ Mᴇ Tᴏ Uʀ Gʀᴏᴜᴘ 🥺", url=f"https://t.me/{me_bot.username}?startgroup=true")
                 ],
             ]
         ),
